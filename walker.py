@@ -21,7 +21,8 @@ def press_print(btn, name):
     press(btn)
 
 def mouse_move(say, path_pic):
-    pos = imagesearch_loop('path_pics/'+path_pic, 1)
+    adress = 'path_pics/'+str(path_pic)
+    pos = imagesearch_loop(adress, 0.8)
     if pos[0] != -1:
         mouseDown(pos[0], pos[1])
         sleep(0.1)
@@ -29,10 +30,6 @@ def mouse_move(say, path_pic):
         print(say+' - position : ', pos[0], pos[1])
     else:
         print("image not found")
-
-
-
-
 
 #pydirectinput.PAUSE = 1
 
@@ -57,34 +54,39 @@ sleep(2)
 keyDown('w')
 keyDown('d')
 sleep(0.3)
+keyUp('w')
+keyUp('d')
 press('k')
+sleep(1)
 press('k')
+sleep(1)
 
-press('k')
+press('k')#interrogate
+sleep(1)
 
 #начали пытать
 press('k')
-sleep(1)
+sleep(0.5)
 press('k')
 sleep(1)
 
 press('k')
-sleep(1)
+sleep(0.5)
 press('k')
 sleep(1)
 
 press('k')
-sleep(1)
+sleep(0.5)
 press('k')
 sleep(1)
 
 press('k')
-sleep(1)
+sleep(0.5)
 press('k')
 sleep(1)
 
 press('k')
-sleep(1)
+sleep(0.5)
 press('k')
 sleep(1)
 
@@ -92,7 +94,10 @@ press('l')
 sleep(1)
 
 #надо екстрактнуть
-click(420, 537, 1)
+moveTo(420, 537)
+sleep(1)
+click(420, 537)
+sleep(1)
 press('k')
 
 sleep(1)
